@@ -175,7 +175,7 @@ let _serde_json_roundtrip_tests =
       tuple_variant ctx "variant_with_many_args" 0 "C" 3 @@ fun ctx ->
       let* () = element ctx (int32 i) in
       let* () = element ctx (string str) in
-      let* () = element ctx (float flt) in
+      let* () = element ctx (Ser.float flt) in
       Ok ())
     De.(
       deserializer @@ fun ctx ->
